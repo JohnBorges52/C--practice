@@ -3,24 +3,16 @@
   class Program
   {
 
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
+      Book book1 = new Book("lord of the rings", "Tolkien", 300, "PG");
+      Book book2 = new Book("Hobbit", "Tolkien", 800, "PG-13");
+      Book book3 = new Book("Matrix", "Tom", 1500, "HAHA");
 
-
-      Console.WriteLine("---");
-      Console.WriteLine("Whats your name? ");
-      string name = Console.ReadLine();
-
-      Console.WriteLine("How old are you? ");
-      int age = Convert.ToInt32(Console.ReadLine());
-
-      Bibico(name, age);
-
-      Console.WriteLine("---");
+      Console.WriteLine(book1.Rating);
+      Console.WriteLine(book2.Rating);
+      Console.WriteLine(book3.Rating);
     }
-    static void Bibico(string name, int age)
-    {
-      Console.WriteLine("Hello " + name + " you are " + age + "years old");
-    }
+
   }
 }
